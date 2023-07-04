@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* Add your custom styles here for enhanced visuals */
+    .testimonials {
+      position: relative;
+      min-width: 100%;
+      -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      min-height: 350px;
+      background: #fff;
+      margin: 0 20px;
+    }
+
+    /* Add custom transition effect */
+    .testimonials .card .layer {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#03a9f4, #e91ee63);
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    .testimonials .card:hover .layer {
+      top: 0;
+    }
+
+    /* Add parallax effect */
+    .testimonials .card-content {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transition: 0.5s;
+    }
+
+    .testimonials .card:hover .card-content {
+      transform: rotateX(-10deg) translateY(-10px) translateZ(-50px);
+    }
+
+    /* Add customized testimonial cards */
+    .testimonials .card-content {
+      position: relative;
+      z-index: 2;
+      padding: 60px 40px;
+      text-align: center;
+      background: #333;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .testimonials .card-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .testimonials .card-content p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* Intro Section */
+    .intro-section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      flex-direction: column;
+    }
+
+    .intro-section h1 {
+      color: #fff;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .intro-section p {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .intro-section button {
+      background-color: #03a9f4;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Custom Swiper Transitions */
+    .swiper-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-out;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .swiper-wrapper.move-next {
+      transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    .swiper-wrapper.move-prev {
+      transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
+    }
+    .testimonial-image {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  filter: brightness(150%) saturate(120%);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial-image:hover {
+  transform: scale(1.1); /* Apply a larger scale on hover */
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+}
+</style>
+</head>
+<body>
+  <div class="intro-section">
+    <h1>Welcome to Our Testimonials</h1>
+    <p>Discover what our clients have to say about us</p>
+    <button id="startBtn">Get Started</button>
+  </div>
+
+  <div class="testimonials">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+     <!-- Testimonial 1 -->
+<div class="swiper-slide">
+    <div class="card">
+      <div class="card-content">
+        <img src="1.jpg" alt="Testimonial Image" class="testimonial-image">
+        <h2>John Doe</h2>
+        <p>Software Developer</p>
+        <p>"I'm impressed with the futuristic design and responsiveness of this website. It's a great showcase for testimonials."</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Testimonial 2 -->
+  <div class="swiper-slide">
+    <div class="card">
+      <div class="card-content">
+        <img src="2.jpg" alt="Testimonial Image" class="testimonial-image">
+        <h2>Jane Smith</h2>
+        <p>UX Designer</p>
+        <p>"The design of this testimonials site is sleek and modern. It truly represents the future of web design."</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add more testimonials with images -->
+  
+  
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+                <img src="3.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>David Johnson</h2>
+              <p>Front-end Developer</p>
+              <p>"This website is visually stunning. The use of colors and typography is fantastic. Great job!"</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+                <img src="6.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>Sarah Williams</h2>
+              <p>Graphic Designer</p>
+              <p>"I love the unique and futuristic style of this testimonials site. It's inspiring and eye-catching."</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 5 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+                <img src="7.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>Michael Brown</h2>
+              <p>Project Manager</p>
+              <p>"The responsive layout of this website ensures a seamless experience across different devices. Impressive!"</p>
+              
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 6 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+                <img src="1.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>Lisa Davis</h2>
+              <p>Marketing Specialist</p>
+              <p>"The futuristic design elements of this site make it stand out from the crowd. It's truly remarkable."</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 7 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+                <img src="4.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>Robert Wilson</h2>
+              <p>UI Designer</p>
+              <p>"The attention to detail in the design of this testimonials site is incredible. It sets a new standard for web design."</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 8 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+                <img src="5.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>Emily Taylor</h2>
+              <p>Full-stack Developer</p>
+              <p>"The user experience of this website is top-notch. It's intuitive and engaging. I'm impressed!"</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 9 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+                <img src="1.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>Daniel Anderson</h2>
+              <p>Software Engineer</p>
+              <p>"The futuristic style and animations of this testimonials site create a captivating user experience. Well done!"</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 10 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+                <img src="1.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>Olivia Martinez</h2>
+              <p>Web Designer</p>
+              <p>"I'm amazed by the level of creativity and innovation in the design of this testimonials site. Truly futuristic!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 10,
+        depth: 60,
+        modifier: 2,
+        slideShadows: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 3000, // Delay between slides in milliseconds
+        disableOnInteraction: false, // Enable autoplay even on user interaction
+      },
+      on: {
+        slideChangeTransitionStart: function () {
+          var swiperWrapper = document.querySelector('.swiper-wrapper');
+          if (swiper.realIndex > swiper.previousIndex) {
+            swiperWrapper.classList.add('move-next');
+          } else {
+            swiperWrapper.classList.add('move-prev');
+          }
+        },
+        slideChangeTransitionEnd: function () {
+          var swiperWrapper = document.querySelector('.swiper-wrapper');
+          swiperWrapper.classList.remove('move-next');
+          swiperWrapper.classList.remove('move-prev');
+        }
+      }
+    });
+
+    // Hide intro section and scroll to testimonials on button click
+    var startBtn = document.getElementById('startBtn');
+    var introSection = document.querySelector('.intro-section');
+    var testimonialsSection = document.querySelector('.testimonials');
+    startBtn.addEventListener('click', function() {
+      introSection.style.display = 'none';
+      testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
